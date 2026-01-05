@@ -1,9 +1,9 @@
 {
+  "homepage": "https://cyber-cube.github.io/1",
   "name": "countdown",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://cyber-cube.github.io/1/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
