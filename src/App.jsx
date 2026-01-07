@@ -29,7 +29,7 @@ function App() {
       return
     }
 
-    specificDate.current = new Date(data.year, 4, 30, 0, 0, 0) / 1000
+    specificDate.current = new Date(data.year, data.monthIndex, data.date, 0, 0, 0) / 1000
     currentTime.current = Date.now() / 1000
     // eslint-disable-next-line react-hooks/set-state-in-effect
     specificDate.current <= currentTime.current ? setIsBirthday(true) : setIsBirthday(false)
@@ -69,7 +69,7 @@ function App() {
     <div className="container">
       <div className="card">
         {!isBirthday ? <>
-          <span className="user">Meow's birthday is in:</span>
+          <span className="user">{data.name}'s birthday is in:</span>
           <div className="timer">
             <div className="items">
               <span className="time">{days}</span>
@@ -87,7 +87,7 @@ function App() {
             </div>
           </div>
 
-        </> : <span className="user">Happy Birthday Meow!</span>}
+        </> : <span className="user">Happy Birthday {data.name}!</span>}
       </div>
     </div>
   </>
